@@ -1,0 +1,56 @@
+@host = http://localhost:3000
+@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c3VhcmlvX2lkIjoiNjcxZjhhYjMxNTNjZGU2MTE1NzY2MTMxIiwiaWF0IjoxNzMwMTIxNzc0fQ.5R3dc519grOmJOb7AFab5FxYn1D2xpo-hrt4I-s6xO4
+GET {{host}}/api/products
+
+###
+GET {{host}}/api/products/available
+
+###
+
+GET  {{host}}/api/products/671f6ae8042c3886e22ae88d
+
+###
+GET  {{host}}/api/products/price?min=100&max=100
+
+###
+
+GET  {{host}}/api/products/dpt/moda
+###
+
+POST {{host}}/api/products
+Content-Type: application/json
+
+{
+    "name": "Pantalones",
+    "description": "Pantalon",
+    "price": 12,
+    "department": "test",
+    "stock": 200,
+    "available": true
+}
+
+###
+
+###
+DELETE {{host}}/api/products/671f5d02cf25454d11945cc7
+
+
+###
+
+POST {{host}}/api/users/login
+Content-Type: application/json
+
+{
+    "username": "user",
+    "email": "user@user.com",
+    "password": "1234"
+}
+###
+
+POST {{host}}/api/users/register
+Content-Type: application/json
+
+{
+    "email": "user@user.com",
+    "password": "1234"
+}

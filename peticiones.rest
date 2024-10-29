@@ -1,4 +1,4 @@
-@host = http://localhost:3000
+@host = https://online-shop-z2sd.onrender.com
 @token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c3VhcmlvX2lkIjoiNjcxZjhhYjMxNTNjZGU2MTE1NzY2MTMxIiwiaWF0IjoxNzMwMTIxNzc0fQ.5R3dc519grOmJOb7AFab5FxYn1D2xpo-hrt4I-s6xO4
 GET {{host}}/api/products
 
@@ -51,6 +51,7 @@ POST {{host}}/api/users/register
 Content-Type: application/json
 
 {
-    "email": "user@user.com",
+    "username": "melvin",
+    "email": "melvin@gmail.com",
     "password": "1234"
 }

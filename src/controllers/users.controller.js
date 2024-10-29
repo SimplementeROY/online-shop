@@ -2,7 +2,7 @@ const User = require("../models/users.model")
 const bcrypt = require('bcryptjs');
 const { createToken } = require("../utils/helpers");
 
-const loginUsuario = async (req, res, next) => {
+const registerUsuario = async (req, res, next) => {
 
     try {
         req.body.password = await bcrypt.hash(req.body.password, 8)
@@ -14,7 +14,7 @@ const loginUsuario = async (req, res, next) => {
     }
 }
 
-const registerUsuario = async (req, res, next) => {
+const loginUsuario = async (req, res, next) => {
     const { email, password } = req.body
     try {
         const usuario = await User.findOne({ email: email })
